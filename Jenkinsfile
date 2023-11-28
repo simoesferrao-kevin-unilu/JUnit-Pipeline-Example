@@ -1,43 +1,18 @@
-/*pipeline {
+pipeline {
     agent any
 
     stages {
         stage('Build') {
             steps {
-                git 'https://github.com/simoesferrao-kevin-unilu/JUnit-Pipeline-Example.git'
                 // Build the application
-                bat 'mvn clean install'
+                sh 'mvn clean install'
             }
         }
         stage('Test') {
             steps {
                 // Run the tests
-                bat 'mvn test'
+                sh 'mvn test'
             }
         }
-    }
-}*/
-
-pipeline {
-    agent any
-
-    stages {
-        stage('Hello') {
-            steps {
-                echo 'Hello World'
-            }
-        }
-        stage('Build') {
-                        steps {
-                            // Build the application
-                            bat 'mvn clean install'
-                        }
-                    }
-        stage('Test') {
-                    steps {
-                        // Run the tests
-                        bat 'mvn test'
-                    }
-                }
     }
 }
