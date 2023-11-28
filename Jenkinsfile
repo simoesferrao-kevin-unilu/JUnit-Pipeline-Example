@@ -5,13 +5,13 @@ pipeline {
         stage('Build') {
             steps {
                 // Build the application
-                sh 'mvn clean install'
+                bat 'mvn clean install'
             }
         }
         stage('Test') {
             steps {
                 // Run the tests
-                sh 'mvn test'
+                bat 'mvn test'
             }
         }
     }
