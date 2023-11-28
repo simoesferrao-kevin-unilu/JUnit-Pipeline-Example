@@ -21,6 +21,13 @@
 pipeline {
     agent any
 
+    stage('Build') {
+                steps {
+                    // Build the application
+                    bat 'mvn clean install'
+                }
+            }
+
     stages {
         stage('Hello') {
             steps {
