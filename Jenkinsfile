@@ -1,4 +1,4 @@
-pipeline {
+/*pipeline {
     agent any
 
     stages {
@@ -13,6 +13,18 @@ pipeline {
             steps {
                 // Run the tests
                 bat 'mvn test'
+            }
+        }
+    }
+}*/
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
             }
         }
     }
