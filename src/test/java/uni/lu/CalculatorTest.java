@@ -14,7 +14,7 @@ public class CalculatorTest {
 
     @Test
     public void add2And2() {
-        int result = calculator.add(2, 2);
+        int result = calculator.add(3, 2);
         assertEquals(4, result);
     }
 
