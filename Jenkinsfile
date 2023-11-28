@@ -21,19 +21,18 @@
 pipeline {
     agent any
 
-    stage('Build') {
-                steps {
-                    // Build the application
-                    bat 'mvn clean install'
-                }
-            }
-
     stages {
         stage('Hello') {
             steps {
                 echo 'Hello World'
             }
         }
+        stage('Build') {
+                        steps {
+                            // Build the application
+                            bat 'mvn clean install'
+                        }
+                    }
         stage('Test') {
                     steps {
                         // Run the tests
