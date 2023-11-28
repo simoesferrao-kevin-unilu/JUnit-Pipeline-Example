@@ -9,9 +9,4 @@ public class Calculator {
     public int add(int a, int b) {
         return a + b;
     }
-
-    // Calculates the subtraction of two numbers
-    public int subtract(int a, int b) {
-        return a - b;
-    }
 }

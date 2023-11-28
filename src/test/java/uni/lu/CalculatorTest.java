@@ -10,16 +10,11 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class CalculatorTest {
 
-    private static Calculator calculator;
-
-    @BeforeAll
-    public static void setupCalculator() {
-        calculator = new Calculator();
-    }
+    private static Calculator calculator = new Calculator();
 
     @Test
     public void add2And2() {
-        int result = calculator.add(3, 2);
+        int result = calculator.add(2, 2);
         assertEquals(4, result);
     }
 
