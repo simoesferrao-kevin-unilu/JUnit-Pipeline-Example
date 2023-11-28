@@ -27,5 +27,11 @@ pipeline {
                 echo 'Hello World'
             }
         }
+        stage('Test') {
+                    steps {
+                        // Run the tests
+                        bat 'mvn test'
+                    }
+                }
     }
 }
