@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Get the code from github
-                git 'https://github.com/simoesferrao-kevin-unilu/JUnit-Pipeline-Example.git'
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: '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', url: 'https://github.com/simoesferrao-kevin-unilu/JUnit-Pipeline-Example.git']]])
             }
         }
         stage('Build') {
