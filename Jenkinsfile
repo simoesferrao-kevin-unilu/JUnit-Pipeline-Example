@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Get the code from github
-                git 'https://github.com/simoesferrao-kevin-unilu/JUnit-Pipeline-Example.git'
+                // Get the code from GitHub for the 'main' branch
+                git branch: 'main', url: 'https://github.com/simoesferrao-kevin-unilu/JUnit-Pipeline-Example.git'
             }
         }
         stage('Build') {
